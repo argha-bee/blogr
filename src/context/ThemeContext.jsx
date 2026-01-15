@@ -18,7 +18,6 @@ export const ThemeContextProvider = ({ children }) => {
   };
   useEffect(() => {
     localStorage.setItem("theme", theme);
-    document.documentElement.className = theme;
   }, [theme]);
 
   return <ThemeContext.Provider value={{ theme, toggle }}>{children}</ThemeContext.Provider>;
