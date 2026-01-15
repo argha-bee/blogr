@@ -1,0 +1,117 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.social {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.links {
+  flex: 1;
+  display: flex;
+  gap: 18px;
+  font-size: 18px;
+}
+
+.logo {
+  flex: 1;
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: -3px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--logo-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+/* Designing the "blog" text */
+.logo span:first-child {
+  font-weight: 700;
+  background: linear-gradient(to bottom, var(--logo-text) 50%, rgba(0, 0, 0, 0) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0.9;
+}
+
+/* The "R" Box */
+.logo span:last-child {
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--accent-gradient);
+  color: var(--r-text);
+
+  /* The "Catchy" shape: A super-rounded organic box */
+  padding: 0 12px;
+  height: 45px;
+  min-width: 45px;
+  border-radius: 16px 4px 16px 4px; /* Asymmetric rounding */
+
+  font-size: 40px;
+  margin-left: 6px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Interaction */
+.logo a:hover span:first-child {
+  font-weight: 900;
+  border-radius: 80%;
+  transform: scale(1.1);
+}
+
+.logo a:hover span:last-child {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 80%;
+  transform: scale(1.1) rotate(30deg);
+}
+
+@media screen and (max-width: 1280px) {
+  .logo span:first-child {
+    font-size: 32px;
+  }
+  .logo span:last-child {
+    font-size: 36px;
+  }
+  .links {
+    font-size: 18px;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    gap: 40px;
+  }
+  .social {
+    display: none;
+  }
+  .links {
+    font-size: 12px;
+  }
+  .logo {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo span:first-child {
+    font-size: 24px;
+  }
+  .logo span:last-child {
+    font-size: 28px;
+  }
+}
