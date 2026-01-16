@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ThemeToggle from "../themeToggle/ThemeToggle";
 import AuthLinks from "../authLinks/AuthLinks";
+import Logo from "../logo/Logo";
 
 const Navbar = () => {
   return (
@@ -14,11 +15,14 @@ const Navbar = () => {
         <Image src="/img/tiktok.png" alt="tiktok" width={24} height={24} />
         <Image src="/img/youtube.png" alt="youtube" width={24} height={24} />
       </div>
-      <div className={styles.logo}>
+      {/* <div className={styles.logo}>
         <Link href="/">
           <span>blog</span><span>R</span>
         </Link>
-      </div>
+      </div> */}
+      <Link className={styles.logo} href="/">
+        <Logo />
+      </Link>
       <div className={styles.links}>
         <ThemeToggle />
         <Link href="/">Home</Link>

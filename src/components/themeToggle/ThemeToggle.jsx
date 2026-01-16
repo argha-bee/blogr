@@ -18,7 +18,9 @@ const ThemeToggle = () => {
       <div
         className={styles.ball}
         style={
-          theme === "dark" ? { left: 1, background: "#0f172a" } : { right: 1, background: "#fff" }
+          theme === "dark" 
+            ? { left: 1, background: "#0f172a" } 
+            : { right: 1, background: "#fff" }
         }
       ></div>
       <Image src="/img/sun.png" alt="light mode" width={14} height={14} />

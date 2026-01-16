@@ -1,0 +1,71 @@
+.logo {
+  /* text-align: center; */
+  font-size: 36px;
+  letter-spacing: -3px;
+  font-weight: 900;
+  text-decoration: none;
+  color: var(--logo-text);
+  display: flex;
+  align-items: center;
+}
+
+.logo span:first-child {
+  background: linear-gradient(to bottom, var(--logo-text) 50%, rgba(0, 0, 0, 0) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0.9;
+}
+
+.logo span:last-child {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--accent-gradient);
+  color: var(--r-text);
+
+  padding: 0 12px;
+  height: 45px;
+  min-width: 45px;
+  border-radius: 16px 4px 16px 4px;
+
+  font-size: 40px;
+  margin-left: 6px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo:hover span:first-child {
+  border-radius: 80%;
+  transform: scale(1.1);
+}
+
+.logo:hover span:last-child {
+  border-radius: 80%;
+  transform: scale(1.2) rotate(30deg);
+}
+
+@media screen and (max-width: 1280px) {
+  .logo span:first-child {
+    font-size: 32px;
+  }
+  .logo span:last-child {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .logo {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo span:first-child {
+    font-size: 24px;
+  }
+  .logo span:last-child {
+    font-size: 28px;
+  }
+}
