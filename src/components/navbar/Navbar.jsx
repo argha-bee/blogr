@@ -25,10 +25,10 @@ const Navbar = () => {
       </Link>
       <div className={styles.links}>
         <ThemeToggle />
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/contact">Contact</Link>
-        {/* <Link href="/write">Write</Link> */}
+        <Link href="/" className={styles.link}>Home</Link>
+        <Link href="/about" className={styles.link}>About</Link>
+        <Link href="/contact" className={styles.link}>Contact</Link>
+        {/* <Link href="/write" className={styles.link}>Write</Link> */}
         <AuthLinks />
       </div>
     </div>
