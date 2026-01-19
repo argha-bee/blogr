@@ -1,4 +1,88 @@
 .container {
-    
-    
+  margin-top: 30px;
+  position: relative;
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  min-height: 500px;
+}
+
+.imgContainer {
+  flex: 1;
+  height: 500px;
+  position: relative;
+  border-radius: 24px; /* Soft 2026 rounded corners */
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.textContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.postTitle {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--textColor);
+}
+
+.postDesc {
+  font-size: 18px;
+  color: var(--softTextColor);
+  line-height: 1.6;
+}
+
+.button {
+  width: max-content;
+  padding: 16px 32px;
+  border-radius: 12px;
+  background-color: var(--textColor);
+  color: var(--bg);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+/* PROGRESS BAR STYLING */
+.progressContainer {
+  display: flex;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 4px;
+  background-color: rgba(128, 128, 128, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--textColor);
+}
+
+@media screen and (max-width: 1024px) {
+  .post {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .postTitle { font-size: 36px; }
 }

@@ -23,14 +23,20 @@ const Navbar = () => {
       <Link className={styles.logo} href="/">
         <Logo />
       </Link>
+      <ThemeToggle />
       <div className={styles.links}>
-        <ThemeToggle />
-        <Link href="/" className={styles.link}>Home</Link>
-        <Link href="/about" className={styles.link}>About</Link>
-        <Link href="/contact" className={styles.link}>Contact</Link>
+        <Link href="/" className={styles.link}>
+          Home
+        </Link>
+        <Link href="/about" className={styles.link}>
+          About
+        </Link>
+        <Link href="/contact" className={styles.link}>
+          Contact
+        </Link>
         {/* <Link href="/write" className={styles.link}>Write</Link> */}
-        <AuthLinks />
       </div>
+      <AuthLinks />
     </div>
   );
 };

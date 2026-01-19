@@ -1,3 +1,122 @@
+.desktopLinks {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
 .link {
-    cursor: pointer;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: var(--textColor);
+  transition: opacity 0.2s;
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+
+/* Burger Styling */
+.burger {
+  width: 25px;
+  height: 20px;
+  display: none; 
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 2000;
+  transition: transform 0.3s ease;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--textColor);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  transform-origin: left;
+}
+
+.authAction {
+  background-color: cadetblue;
+  padding: 8px;
+  font-weight: 800;
+  border-radius: 5px;
+}
+
+.authAction:hover {
+    background-color: aquamarine;
+  opacity: 0.8;
+}
+
+/* Burger to 'X' Animation */
+.burgerActive .line:nth-child(1) {
+  transform: rotate(45deg);
+}
+.burgerActive .line:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.burgerActive .line:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+
+.responsiveMenu {
+  position: fixed; 
+  top: 0;
+  right: -100%; 
+  width: 250px;
+  height: 100vh;
+  background-color: blueviolet; /* Or var(--bg) */
+  display: none;
+  flex-direction: column;
+  padding: 80px 40px;
+  gap: 30px;
+  z-index: 1500;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+}
+
+.menuOpen {
+  right: 0; /* Slide in */
+}
+
+.burgerLink {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  background: none;
+  border: none;
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.burgerLink:hover {
+  transform: translateX(10px);
+}
+
+.separator {
+  border: 0;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin: 10px 0;
+}
+
+
+@media screen and (max-width: 640px) {
+  .desktopLinks {
+    display: none;
+  }
+  
+  .burger {
+    display: flex;
+  }
+
+  .responsiveMenu {
+    display: flex;
+  }
 }
