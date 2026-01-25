@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flext-start;
+  gap: 20px;
+  /* align-items: center; */
+  padding: 20px;
+  min-height: 200px;
+}
+
+.categoryItem {
+  display: flex;
+  justify-content: center;
+  margin: 20px 10px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  cursor: pointer;
+  background-color: var(--softBg);
+  border-radius: 10px;
+  min-width: 200px;
+  transition: all 0.5s ease;
+}
+
+.categoryItem img {
+  border-radius: 50%;
+}
+
+.categoryItem:hover {
+  transform: scale(1.1) translateY(-5px);
+  font-weight: 900;
+}
