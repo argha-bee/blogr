@@ -5,10 +5,10 @@ import Image from "next/image";
 
 const Card = ({ key, item }) => {
   return (
-    <div className={styles.container} key={key}>
+    <Link href={`/posts/${item.slug}`} className={styles.container} key={key}>
       {item.img && (
         <div className={styles.imageContainer}>
-          <Image src={item.img} alt="" height={50} width={50} className={styles.image} />
+          <Image src={item.img} fill alt="" className={styles.image} />
         </div>
       )}
       <div className={styles.textContainer}>
@@ -19,17 +19,14 @@ const Card = ({ key, item }) => {
           </span>
           <span className={styles.category}>{item.catSlug}</span>
         </div>
-        <Link href={`/posts/${item.slug}`}>
-          <h1>{item.title}</h1>
-        </Link>
-        <div className={styles.desc}>
-          {item?.desc.substring(0, 60)}
-        </div>
+
+        <h1>{item.title}</h1>
+        <div className={styles.desc}>{item?.desc.substring(0, 600)}</div>
         <Link href={`/posts/${item.slug}`} className={styles.link}>
           Read More
         </Link>
       </div>
-    </div>
+    </Link>
   );
 };
 
